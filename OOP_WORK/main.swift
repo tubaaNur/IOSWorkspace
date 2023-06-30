@@ -8,6 +8,9 @@ var toplam=0
 for sayi in dizi{
     toplam = toplam+sayi
 }
+ //
+ 
+ 
 print("Toplam = \(toplam) " )
 print("Ortalama = \(toplam / dizi.count) ") */
 
