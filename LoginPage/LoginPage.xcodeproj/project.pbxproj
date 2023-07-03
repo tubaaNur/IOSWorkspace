@@ -50,6 +50,8 @@
 		292C2FE52A5375B300AC3F09 /* LoginPageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageUITests.swift; sourceTree = "<group>"; };
 		292C2FE72A5375B300AC3F09 /* LoginPageUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		292C2FF62A537FAA00AC3F09 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		292C2FFB2A53808200AC3F09 /* Simulator Screenshot - iPhone 14 Pro - 2023-07-04 at 01.09.07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screenshot - iPhone 14 Pro - 2023-07-04 at 01.09.07.png"; sourceTree = "<group>"; };
+		292C2FFC2A53808500AC3F09 /* Simulator Screenshot - iPhone 14 Pro - 2023-07-04 at 01.11.31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screenshot - iPhone 14 Pro - 2023-07-04 at 01.11.31.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,8 @@
 		292C2FC32A5375B200AC3F09 /* LoginPage */ = {
 			isa = PBXGroup;
 			children = (
+				292C2FFC2A53808500AC3F09 /* Simulator Screenshot - iPhone 14 Pro - 2023-07-04 at 01.11.31.png */,
+				292C2FFB2A53808200AC3F09 /* Simulator Screenshot - iPhone 14 Pro - 2023-07-04 at 01.09.07.png */,
 				292C2FC42A5375B200AC3F09 /* AppDelegate.swift */,
 				292C2FC62A5375B200AC3F09 /* SceneDelegate.swift */,
 				292C2FC82A5375B200AC3F09 /* ViewController.swift */,
