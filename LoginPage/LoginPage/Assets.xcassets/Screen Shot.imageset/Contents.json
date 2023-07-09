@@ -1,17 +1,14 @@
 {
   "images" : [
     {
-      "filename" : "Screenshot 2023-07-09 at 18.28.03.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Screenshot 2023-07-09 at 18.27.31.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Screenshot 2023-07-09 at 18.28.19.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
