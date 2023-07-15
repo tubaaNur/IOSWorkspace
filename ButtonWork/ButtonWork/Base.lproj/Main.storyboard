@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ButtonWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="textttt" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7dg-q0-0se">
+                                <rect key="frame" x="113.00000000000001" y="281" width="141.33333333333337" height="45.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUF-bT-4LH">
+                                <rect key="frame" x="159" y="378" width="49.333333333333343" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
+                                <connections>
+                                    <action selector="ButtonAct:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mo0-x8-Vog"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWd-ge-XiR">
+                                <rect key="frame" x="145" y="188" width="77.333333333333314" height="53"/>
+                                <color key="backgroundColor" red="0.51145966509999996" green="0.31894152349999999" blue="0.57453421309999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="T1b-K4-yd9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" red="0.91834461902783504" green="0.85758916914679262" blue="0.14712154389218829" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CUF-bT-4LH" secondAttribute="trailing" constant="159" id="8fe-cd-mTL"/>
+                            <constraint firstItem="CUF-bT-4LH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="GDc-Ds-UQM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AWd-ge-XiR" secondAttribute="trailing" constant="145" id="HAe-Sd-eGu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7dg-q0-0se" secondAttribute="trailing" constant="113" id="MFw-ut-HoD"/>
+                            <constraint firstItem="7dg-q0-0se" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="e5O-LN-hfK"/>
+                            <constraint firstItem="7dg-q0-0se" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="222" id="gZp-r1-Hob"/>
+                            <constraint firstItem="AWd-ge-XiR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="im2-WH-mmk"/>
+                            <constraint firstItem="CUF-bT-4LH" firstAttribute="top" secondItem="7dg-q0-0se" secondAttribute="bottom" constant="51.329999999999998" id="nJd-yU-Zd3"/>
+                            <constraint firstItem="AWd-ge-XiR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="129" id="x1B-Fm-Eiz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Label" destination="AWd-ge-XiR" id="aWJ-in-oAV"/>
+                        <outlet property="TextFieldButton" destination="7dg-q0-0se" id="Ztn-Y6-yGe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
