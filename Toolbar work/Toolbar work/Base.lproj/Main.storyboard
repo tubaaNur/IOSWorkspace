@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Toolbar_work" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIA-rc-D95">
+                                <rect key="frame" x="0.0" y="769" width="393" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="vso-5y-zMd">
+                                        <color key="tintColor" red="0.54370359840000004" green="0.12146730209999999" blue="0.18414916379999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="BackButton:" destination="BYZ-38-t0r" id="nSj-O3-88J"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="c0i-Pn-Jt5"/>
+                                    <barButtonItem title="Play" width="42" style="plain" id="FiT-Ts-N6F">
+                                        <color key="tintColor" red="0.51145966509999996" green="0.31894152349999999" blue="0.57453421309999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="PlayButton:" destination="BYZ-38-t0r" id="tZo-fS-gOj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem image="homekit" catalog="system" width="42" style="plain" id="whq-TZ-J7d">
+                                        <connections>
+                                            <action selector="HomeButton:" destination="BYZ-38-t0r" id="qOA-vV-GSv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQM-if-GUu">
+                                <rect key="frame" x="175" y="308" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lIA-rc-D95" secondAttribute="bottom" id="IlB-nz-maD"/>
+                            <constraint firstItem="lIA-rc-D95" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="R54-OE-9no"/>
+                            <constraint firstItem="lIA-rc-D95" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="X5Y-lw-ozP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lIA-rc-D95" secondAttribute="bottom" id="dl5-kJ-1Kb"/>
+                            <constraint firstItem="lIA-rc-D95" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gTP-Xv-e2L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lIA-rc-D95" secondAttribute="bottom" id="hLI-yf-WKl"/>
+                            <constraint firstItem="lIA-rc-D95" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jhu-3n-Eeg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BackButton" destination="lIA-rc-D95" id="52c-Vh-2Kr"/>
+                        <outlet property="etiket" destination="TQM-if-GUu" id="MbO-PG-28R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
