@@ -9,8 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var sliderLabel: UISlider!
     @IBOutlet weak var Label: UILabel!
     @IBOutlet weak var TextFieldButton: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -21,6 +23,10 @@ class ViewController: UIViewController {
         if let data = TextFieldButton.text{
             Label.text = data
         }
+    }
+    @IBAction func clicks(_ sender: Any) {
+    }
+    @IBAction func slidercontrol(_ sender: Any) {
     }
 }
 
