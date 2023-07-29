@@ -16,6 +16,7 @@
 		296DC28A2A754B8A009BBF4E /* BasicAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2892A754B8A009BBF4E /* BasicAlertTests.swift */; };
 		296DC2942A754B8A009BBF4E /* BasicAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2932A754B8A009BBF4E /* BasicAlertUITests.swift */; };
 		296DC2962A754B8A009BBF4E /* BasicAlertUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296DC2952A754B8A009BBF4E /* BasicAlertUITestsLaunchTests.swift */; };
+		296DC2A32A755A2F009BBF4E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 296DC2A22A755A2F009BBF4E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		296DC28F2A754B8A009BBF4E /* BasicAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		296DC2932A754B8A009BBF4E /* BasicAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAlertUITests.swift; sourceTree = "<group>"; };
 		296DC2952A754B8A009BBF4E /* BasicAlertUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAlertUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		296DC2A22A755A2F009BBF4E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		296DC2662A754B88009BBF4E = {
 			isa = PBXGroup;
 			children = (
+				296DC2A22A755A2F009BBF4E /* README.md */,
 				296DC2712A754B89009BBF4E /* BasicAlert */,
 				296DC2882A754B8A009BBF4E /* BasicAlertTests */,
 				296DC2922A754B8A009BBF4E /* BasicAlertUITests */,
@@ -233,6 +236,7 @@
 			files = (
 				296DC27F2A754B8A009BBF4E /* LaunchScreen.storyboard in Resources */,
 				296DC27C2A754B8A009BBF4E /* Assets.xcassets in Resources */,
+				296DC2A32A755A2F009BBF4E /* README.md in Resources */,
 				296DC27A2A754B89009BBF4E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
