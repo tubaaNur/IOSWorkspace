@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var showPasswordLabel: UILabel!
     @IBOutlet weak var labelsSonuc: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,32 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showSpecialAlert(_ sender: Any) {
+        let alertController = UIAlertController(title: "Başlık", message: "Mesaj", preferredStyle: .alert)
+        
+        alertController.addTextField{textField in
+            textField.placeholder = "Email"
+            textField.keyboardType = .emailAddress
+        }
+        alertController.addTextField{textField in
+            textField.placeholder = "Şifre"
+            textField.isSecureTextEntry = true
+        }
+        
+        
+        let kaydetAction = UIAlertAction(title: "Kaydet", style: .destructive){
+            action in
+            print(" Kaydet tıklandı")
+            
+            let alinanEmail = (alertController.textFields![0] as UITextField).text!
+            let alinanSifre = (alertController.textFields![1] as UITextField).text!
+            
+            self.labelsSonuc.text = "Email: \(alinanEmail)"
+            self.showPasswordLabel.text = "Şifre: \(alinanSifre)"
+        }
+        
+        alertController.addAction(kaydetAction)
+        self.present(alertController, animated: true)
+        
     }
     
     @IBAction func showAlertSheet(_ sender: Any) {
