@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var izinKontrol:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        UNUserNotificationCenter.current().delegate = self
         
         UNUserNotificationCenter.current().requestAuthorization(options:[.alert, .sound, .badge],completionHandler: {(granted,error) in
             self.izinKontrol = granted
@@ -43,5 +44,13 @@ class ViewController: UIViewController {
     }
     
 
+
 }
+
+extension ViewController: UNUserNotificationCenterDelegate{
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .sound, .badge])
+    }
+    }
+
 
