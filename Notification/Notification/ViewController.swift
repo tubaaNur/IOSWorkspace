@@ -9,7 +9,7 @@ import UIKit
 import UserNotifications
 
 class ViewController: UIViewController {
-//Uygulama ilk çalıştığı anda bildirim almayı soracaksın.
+    //Uygulama ilk çalıştığı anda bildirim almayı soracaksın.
     var izinKontrol:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,35 +29,61 @@ class ViewController: UIViewController {
     @IBAction func bildirimOlustur(_ sender: Any) {
         
         if izinKontrol{
+            
+            let evet = UNNotificationAction(identifier: "evet", title: "evet", options: .foreground)
+            let hayır = UNNotificationAction(identifier: "hayır", title: "hayır", options: .foreground)
+            let sil = UNNotificationAction(identifier: "sil", title: "sil", options: .destructive)
+            let kategori = UNNotificationCategory(identifier: "kat", actions: [evet,hayır,sil], intentIdentifiers: [], options: [])
+            
+            UNUserNotificationCenter.current().setNotificationCategories([kategori])
+            
             let icerik = UNMutableNotificationContent()
             icerik.title = "Başlık"
             icerik.subtitle = "Alt Başlık"
-            icerik.body = "Mesaj"
+            icerik.body = "BLA BLA BLA "
             icerik.badge = 1
             icerik.sound = UNNotificationSound.default
             
-            var date = DateComponents()
-            date.minute = 30
-            date.hour = 8
-            date.day = 20
-            date.month = 4
+            icerik.categoryIdentifier = "kat"
             
-            let tetikleme = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
-//            let tetikleme = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: true)
+            
+            //            var date = DateComponents()
+            //            date.minute = 30
+            //            date.hour = 8
+            //            date.day = 20
+            //            date.month = 4
+            //
+            //            let tetikleme = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
+            let tetikleme = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
             let bildirimIstek = UNNotificationRequest(identifier: "bildirim", content: icerik, trigger: tetikleme)
             UNUserNotificationCenter.current().add(bildirimIstek, withCompletionHandler: nil)
             
         }
     }
     
-
-
+    
+    
 }
 
 extension ViewController: UNUserNotificationCenterDelegate{
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound, .badge])
     }
+        
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+            if response.actionIdentifier == "evet" {
+                print("Doğru")
+            }
+            if response.actionIdentifier == "hayır" {
+                print("yanlış")
+            }
+            if response.actionIdentifier == "sil" {
+                print("bildirim silindi")
+            }
+            
+        completionHandler()
+        }
     }
-
+    
+    
 
