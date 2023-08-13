@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  TableView
+
+  Created by Tuba Nur  on 8.08.2023.
+  
+*/
+"Lahmacuns" = "Lahmacun";
+"Meatball" = "Meatball";
+"Döners" = "Döner";
+"Ayrans" = "Ayran";
+"Water" = "Water";
+"Chicken" = "Chicken";
+"Pilaf" = "Pilaf";
+"Wrap" = "Wrap";
