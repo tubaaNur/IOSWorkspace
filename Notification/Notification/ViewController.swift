@@ -25,7 +25,23 @@ class ViewController: UIViewController {
         })
         
     }
-
+    @IBAction func bildirimOlustur(_ sender: Any) {
+        
+        if izinKontrol{
+            let icerik = UNMutableNotificationContent()
+            icerik.title = "Başlık"
+            icerik.subtitle = "Alt Başlık"
+            icerik.body = "Mesaj"
+            icerik.badge = 1
+            icerik.sound = UNNotificationSound.default
+            
+            let tetikleme = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+            let bildirimIstek = UNNotificationRequest(identifier: "bildirim", content: icerik, trigger: tetikleme)
+            UNUserNotificationCenter.current().add(bildirimIstek, withCompletionHandler: nil)
+            
+        }
+    }
+    
 
 }
 
